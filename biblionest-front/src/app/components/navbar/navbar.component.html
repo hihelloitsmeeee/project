@@ -1,0 +1,16 @@
+<nav id="mainNav" class="navbar navbar-dark navbar-expand-lg bg-dark py-3">
+  <div class="container"><a class="navbar-brand" routerLink="/home">KitapTap</a><button class="navbar-toggler navbar-toggler-right"
+    data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+    type="button" aria-controls="navbarResponsive"
+    aria-expanded="false" aria-label="Toggle navigation"><fa-icon [icon]="faBars"></fa-icon></button>
+      <div id="navbarResponsive" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto text-uppercase">
+              <li class="nav-item" *ngIf="!isLogged"><a class="nav-link" routerLink="/authentification">login/registration</a></li>
+              <li class="nav-item" *ngIf="isLogged"><a class="nav-link" routerLink="/home">my books</a></li>
+              <li class="nav-item" *ngIf="isLogged"><a class="nav-link" routerLink="/add_book">add a book</a></li>
+              <li class="nav-item" *ngIf="isLogged"><a class="nav-link" routerLink="/profile">my profile</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/">about</a></li>
+          </ul>
+      </div>
+  </div>
+</nav>
